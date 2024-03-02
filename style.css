@@ -1,0 +1,374 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Ubuntu&display=swap');
+/* Selection for all elemnts */
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+/* Adding background colour and font family */
+body{
+  background: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+  animation: motion 2s ease-in-out;
+}
+html{
+  scroll-behavior: smooth;
+}
+@keyframes motion {
+  0%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
+}
+/* All HTML elements styles*/
+.home-page{
+  height: 100vh;
+  transition: transform 2s ease;
+}
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  z-index: 2;
+  top: 0%;
+}
+
+.links{
+  display: flex;
+  justify-content: center;
+  gap: 10em;
+}
+.links a{
+  text-decoration: none;
+  color: black;
+}
+.links a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.5);
+}
+
+.links a:hover::after {
+  transform: scaleX(1); 
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8);
+}
+.my-info{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36em;
+  color: black;
+  gap: 13em;
+  cursor: default;
+  font-size: 20px;
+  background-image: url(images/infoBack.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 100px;
+  cursor: default;
+}
+.my-info .text-container{
+  width: 50%;
+  height: 50%;
+  margin-top: -15em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-info .name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .3em;
+  cursor: default;
+  color: white;
+}
+.my-info .about{
+  color: white;
+  margin-left: 2em;
+}
+.my-info .hovering h1{
+  color: white;
+  transition: .5s ease-in;
+}
+.my-info .hovering h1:hover{
+  color: black;
+  
+}
+.my-info .hovering h1 span{
+  color: black;
+  transition: .5s ease-in;
+}
+.my-info .hovering h1:hover span{
+  color: white;
+}
+
+.downArrow{
+  position: absolute;
+  bottom: 8%;
+}
+.downArrow img{
+  width: 40%;
+}
+
+.aboutMe{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8em;
+  margin-top: 2em;
+  opacity: 0;
+  transition: .5s ease-in;
+  transform: translateY(100px);
+  cursor: default;
+}
+
+.aboutMe .image img{
+  width: 20em;
+  height: 100%;
+}
+.aboutMe .text{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.aboutMe .text .skills{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+.aboutMe .text .skills ul{
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  margin-top: 1em;
+}
+.aboutMe .text .skills ul li{
+  border: 1px solid black;
+  padding: 0px 8px 0px 8px;
+}
+.projects{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: .5s ease-in;
+  cursor: default;
+}
+.projects .image-finder{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+  gap: 2em;
+}
+.image-finder img{
+  width: 38%;
+  height: 50%;
+  margin: 2em 6em;
+}
+.image-finder .img-text{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.img-text h3{
+  font-size: 30px;
+}
+.img-text p{
+  width: 80%;
+}
+.game{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+  gap: 1em;
+}
+.game img{
+  width: 38%;
+  height: 60%;
+  margin: 2em 6em;
+}
+.game .game-text{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-left: 5em;
+}
+.game-text p{
+  width: 80%;
+}
+.game-text h3{
+  font-size: 30px;
+}
+.login{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+  gap: 1em;
+}
+.login img{
+  width: 38%;
+  height: 60%;
+  margin: 2em 6em;
+}
+.login-text h3{
+  font-size: 30px;
+}
+.login-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-left: 5em;
+}
+.image-finder a,
+.game a,
+.login a{
+  text-decoration: none;
+  color: black;
+  transition: .5s;
+}
+.image-finder a:hover,
+.game a:hover,
+.login a:hover{
+  color: silver;
+}
+
+footer{
+  background-color: black;
+  height: 300px;
+  margin-top: 6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p{
+  color: white;
+}
+
+/* media queries for making page responsive */
+@media screen and (max-width: 900px) {
+  .links{
+    gap: 2em;
+    font-size: 10px;
+    margin-right: 1em;
+  }
+  .navbar{
+    height: 4%;
+    position: fixed;
+  }
+  .my-info{
+    height: 50%;
+  }
+  .my-info h1{
+    font-size: 20px;
+  }
+  .my-info .name{
+    font-size: 12px;
+  }
+  .my-info .about{
+    font-size: 10px;
+  }
+  .my-info .text-container{
+    margin-top: -5em;
+    margin-right: -1em;
+    width: 100%;
+  }
+  .aboutMe .image img{
+    width: 9em;
+  }
+  .aboutMe .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .aboutMe .text{
+    font-size: 7px;
+    width: 100%;
+    padding: 10px;
+    margin-right:14em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 2em;
+  }
+  .aboutMe{
+    gap: 1em;
+    display: block;
+  }
+  .aboutMe .text .skills ul{
+    display: flex;
+    
+  }
+  .projects{
+    width: 100%;
+    font-size: 7px;
+  }
+  .projects h1{
+    font-size: 20px;
+  }
+  .projects .image-finder h3{
+    font-size: 15px;
+  }
+  .image-finder img{
+    width: 30%;
+    display: none;
+  }
+  .projects .image-finder{
+    gap: 0em;
+    margin: 3em;
+    margin-left: 13em;
+  }
+  .game img{
+    display: none;
+  }
+  .game h3{
+    font-size: 15px;
+  }
+  .login img{
+    display: none;
+  }
+  .login h3{
+    font-size: 15px;
+  }
+  .login{
+    width: 80%;
+    margin-left: -10em;
+  }
+  footer{
+    font-size: 10px;
+    width: 100%;
+    height: 15%;
+  }
+  
+}
